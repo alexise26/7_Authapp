@@ -14,7 +14,8 @@ export class AuthService {
     responseType: 'token id_token',
     audience: 'https://alexise26.auth0.com/userinfo',
     redirectUri: 'http://localhost:4200/callback',
-    scope: 'openid profile'
+    scope: 'openid profile email', //Agregamos profile para el perfil y email para el correo
+    leeway: 30//Se agrega para el correo
   });
 
   constructor(public router: Router) {}

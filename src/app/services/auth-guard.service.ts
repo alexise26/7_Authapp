@@ -9,8 +9,6 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(next:ActivatedRouteSnapshot, state: RouterStateSnapshot){
 
-    //console.log(next);
-
     if (this.auth.isAuthenticated()) {
         //console.log("El guard paso");
         return true;
